@@ -26,12 +26,13 @@ def add():
     db.session.commit()
     return redirect('/')
 
-@app.route('/delete/<int:id>')
+@app.route('/delete/<int:id>', methods=['POST'])
 def delete(id):
     task = Task.query.get(id)
     db.session.delete(task)
     db.session.commit()
     return redirect('/')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

@@ -297,8 +297,8 @@
 
               <!-- Better to delete with POST to avoid accidental GET deletions.
                    If you must keep <a href="/delete/{{task.id}}">Delete</a>, we intercept and confirm with JS below. -->
-              <form action="/delete/{{ task.id }}" method="post" style="margin:0;">
-                <button type="submit" class="btn-ghost btn-danger" onclick="return confirmDelete(event, '{{ task.title|e }}')">Delete</button>
+              <form action="/delete/{{ task.id }}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
               </form>
             </div>
           </li>
